@@ -1,25 +1,86 @@
-# 🚀 Aplicación FastAPI con Docker  
+# FastAPI con Docker
 
-¡Bienvenido a este proyecto FastAPI con Docker! Aquí aprenderás a ejecutar la aplicación en segundos.  
+Este es un proyecto de una aplicación FastAPI desplegada en Docker.
 
-## 🛠 Requisitos  
+## Requisitos previos
 
-Antes de comenzar, asegúrate de tener instalado lo siguiente:  
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-- [🐳 Docker](https://www.docker.com/get-started)  
-- [🐙 Git](https://git-scm.com/) (opcional si solo quieres ejecutar la app)  
+- [Docker](https://www.docker.com/get-started)
+- [Git](https://git-scm.com/)
 
-## 📥 Descargar la imagen de Docker Hub  
-
-No necesitas construir nada, simplemente descarga la imagen lista para usar:  
+## 1. Clonar el repositorio
 
 ```bash
-docker pull jivansierra/fastapi:latest
+git clone https://github.com/tu-usuario/fastapi-docker.git
+cd fastapi-docker
 ```
 
-🚀 Ejecutar el Contenedor
-Ejecuta el siguiente comando para poner la aplicación en marcha:
+*(Reemplaza `tu-usuario` con tu nombre de usuario en GitHub.)*
+
+## 2. Construir la imagen Docker
 
 ```bash
-docker run -d -p 8000:8000 --name fastapi-container jivansierra/fastapi-app
+docker build -t tu-usuario/fastapi-app .
 ```
+
+## 3. Ejecutar el contenedor
+
+```bash
+docker run -d -p 8000:8000 tu-usuario/fastapi-app
+```
+
+Esto ejecuta el contenedor en segundo plano y expone la aplicación en el puerto `8000`.
+
+## 4. Acceder a la aplicación
+
+Abre tu navegador y ve a:
+
+```
+http://localhost:8000
+```
+
+Para ver la documentación interactiva de FastAPI Swagger:
+
+```
+http://localhost:8000/docs
+```
+
+## 5. Publicación en Docker Hub
+
+Si deseas subir tu imagen a Docker Hub, sigue estos pasos:
+
+### 5.1 Iniciar sesión en Docker Hub
+```bash
+docker login
+```
+
+*(Introduce tu usuario y contraseña de Docker Hub cuando te lo pida.)*
+
+### 5.2 Etiquetar la imagen
+```bash
+docker tag tu-usuario/fastapi-app tu-usuario/fastapi-app:v1.0
+```
+
+### 5.3 Subir la imagen
+```bash
+docker push tu-usuario/fastapi-app:v1.0
+```
+
+
+## 7. Limpieza de Imágenes y Contenedores
+
+Para eliminar contenedores detenidos y liberar espacio:
+
+```bash
+docker container prune
+```
+
+Para eliminar imágenes innecesarias:
+
+```bash
+docker rmi tu-usuario/fastapi-app:v1.0
+```
+
+
+
