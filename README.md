@@ -2,6 +2,8 @@ Aplicación FastAPI con Docker
 
 descargar:
  docker pull jivansierra/fastapi:latest 
+
+ docker build -t jivansierra/fastapi-app:latest .
  
 Ejecución del Contenedor:
 
