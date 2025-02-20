@@ -14,11 +14,11 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 No necesitas construir nada, simplemente descarga la imagen lista para usar:  
 
 ```bash
-docker pull jivansierra/fastapi:latest
+docker pull jivansierra/fastapi-app:latest
 ```
 🚀 Ejecutar el Contenedor
 Ejecuta el siguiente comando para poner la aplicación en marcha:
 
 ```bash
-docker run -d -p 8000:8000 --name fastapi-container jivansierra/fastapi-app
+docker run -d -p 8000:8000 --name fastapi-container jivansierra/fastapi-app:latest
 ```
