@@ -5,6 +5,6 @@ descargar:
  
 Ejecución del Contenedor:
 
-docker run -d -p 8000:80 --name fastapi-container jivansierra/fastapi-app
+docker run -d -p 8000:8000 --name fastapi-container jivansierra/fastapi-app
 
 
